@@ -1,0 +1,11 @@
+/target/
+/recordings/
+/.DS_Store
+/.agent-v12/
+/.agents/
+/.claude/
+/.codex/
+/.mcp.json
+*.jsonl
+*.jsonl.gz
+.agent-v12/capsule.md

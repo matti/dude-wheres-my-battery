@@ -1,0 +1,25 @@
+[package]
+name = "dude-wheres-my-battery"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+description = "Record battery drain, find sustained CPU consumers, and compare changes on macOS"
+
+[[bin]]
+name = "battery"
+path = "src/main.rs"
+
+[dependencies]
+libc = "0.2.186"
+mach2 = "0.4.3"
+core-foundation-sys = "0.8.7"
+io-kit-sys = "0.4.1"
+ratatui = "0.30.2"
+clap = { version = "4.6.6", features = ["derive"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+flate2 = "1"
+
+[profile.release]
+lto = true
+codegen-units = 1
